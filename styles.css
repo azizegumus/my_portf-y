@@ -1,4 +1,3 @@
-/* guncelleme v2 */
 :root {
   --font-title: 'Bricolage Grotesque', system-ui, sans-serif;
   --font-body: 'Manrope', system-ui, sans-serif;
@@ -165,7 +164,7 @@ body {
   transition: transform var(--transition-speed);
 }
 
-/* DÜZELTİLEN HERO SECTION (Solda Metinler, Sağda Panel) */
+/* HERO SECTION */
 .hero {
   min-height: 85vh;
   display: grid;
@@ -216,15 +215,18 @@ body {
 
 .hero-actions {
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
-  padding: 0.75rem 1.5rem;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 8px;
   font-weight: 600;
+  font-size: 0.95rem;
   text-decoration: none;
   transition: all var(--transition-speed);
 }
@@ -239,6 +241,17 @@ body {
   transform: translateY(-2px);
 }
 
+.btn-outline {
+  background: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
+.btn-outline:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+}
+
 .btn-ghost {
   background: var(--bg-subtle);
   color: var(--text-main);
@@ -250,7 +263,7 @@ body {
   color: var(--accent-color);
 }
 
-/* Sağdaki Panel Düzeltmeleri */
+/* Panel Design */
 .hero-visual {
   width: 100%;
   display: flex;
@@ -324,7 +337,6 @@ body {
 .c-kw { color: var(--accent-color); font-weight: 600; }
 .c-str { color: #10b981; }
 
-/* Scroll Animasyon Çizgisi */
 .hero-scroll {
   position: absolute;
   bottom: 0.5rem;
@@ -349,7 +361,7 @@ body {
   100% { transform: translateY(100%); }
 }
 
-/* Sections General */
+/* General Sections */
 .section {
   padding: 5rem 2rem;
   max-width: 1200px;
@@ -497,6 +509,34 @@ body {
   font-size: 0.85rem;
   color: var(--text-sub);
   font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Proje Link Butonları */
+.project-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all var(--transition-speed);
+}
+
+.project-link:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /* Timeline */
@@ -630,7 +670,7 @@ body {
   transform: translateY(0);
 }
 
-/* Mobil Responsive Düzen */
+/* Responsive */
 @media (max-width: 960px) {
   .hero {
     grid-template-columns: 1fr;
